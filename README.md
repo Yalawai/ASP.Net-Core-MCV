@@ -73,12 +73,7 @@ This project is an ASP.NET Core MVC web application developed as a university as
 - `appsettings.json` – Configuration.
 - `app.db` – SQLite DB.
 
-## How to Contribute
 
-1. Fork this repository.
-2. Create a new feature branch (`git checkout -b feature/my-feature`).
-3. Commit your changes and push to your fork.
-4. Submit a Pull Request.
 
 ## License
 
