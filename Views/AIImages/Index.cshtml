@@ -1,0 +1,77 @@
+@model IEnumerable<WDP2024Assignment2.Models.AIImage>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["css-link"] = "~/css/aiimages.css";
+}
+
+<div class="heading">
+    <h1>
+        List of AI Images
+    </h1>
+    <a class="nav-link text-muted" asp-area="" asp-controller="AIImages" asp-action="Create">Click here to upload a new
+        AI image</a>
+
+
+</div>
+
+@{
+    int i = 0;
+    foreach (var item in Model)
+    {
+        @if (i % 2 == 0)
+        {
+            <div class="even-section row">
+                <div id='@item.Filename' class="col-md-4 col-sm-12 col-12 bg-ai-img">
+
+                </div>
+                <div class="col-md-8 col-sm-12 col-12  yellow-bg">
+                    <h3>@item.ImageGenerator</h3>
+                    <p>@item.Prompt
+                    </p>
+                    @{
+                        if (User.Identity.IsAuthenticated){
+                            <a asp-action="IncreaseLike" asp-route-id="@item.Id" class="btn btn-primary">Like (@item.Like)</a>
+                            if (User.IsInRole("admin"))
+{
+<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+}
+
+                        }
+                    }
+                    
+                    
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="odd-section row">
+
+                <div class="col-md-8 blue-bg col-sm-12 col-12">
+                    <h3>@item.ImageGenerator</h3>
+                    <p>@item.Prompt
+                    </p>
+                    @{
+                        if (User.Identity.IsAuthenticated){
+                            <a asp-action="IncreaseLike" asp-route-id="@item.Id" class="btn btn-primary">Like (@item.Like)</a>
+                            if (User.IsInRole("admin"))
+{
+<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+}
+
+                        }
+                    }
+                </div>
+
+                <div id='@item.Filename' class="col-md-4 bg-ai-img col-sm-12 col-12">
+
+                </div>
+            </div>
+            @* The same two <div> elements above but in reverse order *@
+        }
+        i = i + 1;
+    }
+}

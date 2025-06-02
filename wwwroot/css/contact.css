@@ -1,0 +1,120 @@
+.wrapper h1{
+    font-family: "Anton", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    brown,
+    brown,
+    yellow,
+    white,
+    yellow,
+    brown,
+    brown
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 9vw 2vw 0vw 2vw;
+  text-align: center;
+  font-size: 7vw;
+}
+
+.wrapper{
+    background-image: url('../images/bg1.jpg');
+    width: 100vw;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.content-block{
+    border: 1px solid white;
+    box-shadow: 10px 10px 0px 0px #f8f6b0;
+    background-color: rgba(0, 0, 128, 0.425);
+    width: 31vw;
+    padding: 2vw;
+}
+
+.content-block h1{
+    font-family: "Niconne";
+    color: yellow;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px navy, 2px 2px 2px white;
+    border-bottom: 1px solid yellow;
+    padding: 0;
+
+}
+
+.content-block p{
+    font-family: Arial;
+    color: yellow;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.content-block:nth-child(1){
+    margin: 0 0.5vw 0 1vw;
+}
+
+.content-block:nth-child(2){
+    margin: 0 0.5vw 0 0.5vw;
+}
+
+.content-block:nth-child(3){
+    margin: 0 1vw 0 0.5vw;
+}
+
+.row{
+    margin-top: 4vw;
+    padding: 1vw;
+}
+
+.content-block p a{
+    
+    font-weight: lighter;
+    text-decoration: none;
+   
+}
+
+@media (max-width: 768px) {
+    .content-block{
+        width: 100vw;
+        border: none;
+        box-shadow: none;
+       
+        
+
+   
+    }
+
+    .content-block:nth-child(1){
+        margin: 0;
+    }
+    
+    .content-block:nth-child(2){
+        margin: 0;
+    }
+    
+    .content-block:nth-child(3){
+        margin: 0;
+    }
+
+    .row{
+        padding: 8vw;
+    }
+
+    .content-block p{
+        
+        font-size: 2vw;
+       
+    }
+
+    .content-block h1{
+        
+        font-size: 4vw;
+     
+    
+    }
+   
+   
+}

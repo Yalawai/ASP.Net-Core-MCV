@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  
+}
+
+h1{
+  color: white;
+}  
+
+h2{
+  color: white
+}
+
+
+h3{
+  font-family:"Anton";
+  color:yellow;
+  
+  text-shadow:2px 2px 0px navy, 2px 
+  2px 4px white;
+
+ }
+
+ a{
+  color: grey;
+  text-decoration: none;
+ }
+
+ p{
+  color: white;
+ }
+
+ hr{
+  color: yellow;
+ }
+
+ label{
+  color: white;
+ }

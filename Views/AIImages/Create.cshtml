@@ -1,0 +1,66 @@
+@model WDP2024Assignment2.Models.AIImage
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["css-link"] = "~/css/create.css";
+}
+
+    
+
+
+<div class="wrapper">
+    <h1>Upload AI images</h1>
+    
+    
+    
+    <div class="row px-5">
+        <div class="col-md-8 pr-2 col-sm-12 col-12">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Prompt" class="control-label text-white"></label>
+                    <textarea asp-for="Prompt" class="form-control" rows="5" name="prompt"></textarea>
+                    <span asp-validation-for="Prompt" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageGenerator" class="control-label text-white"></label>
+                    <input asp-for="ImageGenerator" class="form-control" />
+                    <span asp-validation-for="ImageGenerator" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UploadDate" class="control-label text-white"></label>
+                    <input asp-for="UploadDate" class="form-control" readonly/>
+                    <span asp-validation-for="UploadDate" class="text-danger"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label asp-for="Like" class="control-label text-white"></label>
+                    <input asp-for="Like" class="form-control" readonly value="0" />
+                    <span asp-validation-for="Like" class="text-danger"></span>
+                </div>
+               <div class="form-group">
+                <label class="control-label text-white">Upload image file</label>
+                <input type="file" name="file" class="form-control">
+    
+    
+               </div>
+               <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            
+                
+            </form>
+            
+        </div>
+        <div class="ibm-img col-md-4 col-12 col-sm-12">
+            
+        </div>
+
+        <a class="text-muted" asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

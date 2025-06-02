@@ -1,0 +1,101 @@
+.heading h1 {
+    font-family: "Anton", sans-serif;
+    background-image: linear-gradient(
+      to right,
+      brown,
+      brown,
+      yellow,
+      white,
+      yellow,
+      brown,
+      brown
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 9vw 2vw 0vw 2vw;
+    text-align: center;
+    font-size: 7vw;
+  }
+
+.heading{
+    background-image: url("../images/bg1.jpg");
+    background-position: center;
+ 
+    background-size: cover;
+    padding-bottom: 3vw;
+}
+
+.even-section, .odd-section{
+    width: 100vw;
+    height: 20vw;
+}
+
+.heading a{
+    text-align: center;
+}
+
+
+
+
+.even-section h3, .odd-section h3{
+    color:navy;
+    text-shadow: 2px 2px 0px white, 2px 2px 4px navy;
+    font-family: "Oxygen", sans-serif;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+
+
+
+}
+
+.even-section p, .odd-section p{
+    font: Arial;
+    color: black;
+    font-size: 1vw;
+
+    text-wrap: wrap;
+}
+
+.yellow-bg{
+    background: linear-gradient(to bottom, 
+    #ff9933, #ffe6cc, white, white);
+    padding: 2vw;
+    
+
+}
+
+.blue-bg{
+    background: linear-gradient(to bottom, #3333ff, #ccccff, white, white);
+    padding: 2vw;
+}
+
+@media (max-width:768px){
+    .even-section p, .odd-section p{
+       
+        font-size:2vw;
+    }
+
+    .even-section, .odd-section{
+        width: 100vw;
+        height: auto;
+    }
+
+    .bg-ai-img{
+        width: 100vw;
+        height: 30vw;
+        background-repeat: repeat;
+        background-size: contain ;
+        
+    }
+
+    .yellow-bg, .blue-bg{
+        padding: 5vw;
+    }
+
+   
+
+}
